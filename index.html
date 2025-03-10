@@ -18,11 +18,12 @@
                 <form action="" class="p-4 border rounded bg-body-tertiary">
                     <div class="mb-3">
                         <label class="form-label">Cliente</label>
-                        <input type="text" class="cliente form-control" >
+                        <input class="cliente form-control" type="text" placeholder="Cliente">
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Productos</label>
                         <select class="producto form-select">
+                            <option selected value="">Selecciona un producto</option>
                             <option value="pizza">Pizza</option>
                             <option value="Lasagna">Lasagna</option>
                             <option value="Pasta">Pasta</option>
@@ -32,16 +33,16 @@
 
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Precio</label>
-                        <input type="number" min="20000" class="precio form-control">
+                        <label class="form-label" placeholder="Precio">Precio</label>
+                        <input type="number" min="20000" class="precio form-control"placeholder="Precio">
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Imagen</label>
-                        <input type="url" class="imagen form-control">
+                        <input type="url" class="imagen form-control" placeholder="Imagen">
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Descipcion</label>
-                        <input type="text"class="descripcion form-control">
+                        <label class="form-label">Observacion</label>
+                        <input type="text" class="observacion form-control" placeholder="Observacion">
                     </div>
                     <button type="submit" class="btnGuardar btn btn-primary">GUARDAR PEDIDO</button>
                     </div>
@@ -64,6 +65,6 @@
         </div>
     </div>
     <script src="/js/bootstrap.min.js"></script>
-    <script type="module" src="./js/main.js"></script>
+    <script type="module" src="./js/localStorage.js"></script>
 </body>
 </html>
