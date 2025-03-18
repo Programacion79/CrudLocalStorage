@@ -1,21 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crud con LocalStorage</title>
     <link rel="stylesheet" href="./css/bootstrap.min.css">
-
-
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
+
 <body>
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-7">
+        <div class="row">
+            <!-- Formulario -->
+            <div class="col-md-6">
                 <h1 class="text-center">Crud Pedidos</h1>
-            </div>
-            <div class="col-7">
                 <form action="" class="p-4 border rounded bg-body-tertiary">
+                    <!-- Buscador -->
+                    <div class="mb-3">
+                        <div class="input-group">
+                            <span class="icon"><i class="bi bi-search"></i></span>
+                            <input type="text" id="buscador" class="form-control" placeholder="Buscar pedido...">
+                        </div>
+                    </div>
+
+                    <!-- Campos del formulario -->
                     <div class="mb-3">
                         <label class="form-label">Cliente</label>
                         <input class="cliente form-control" type="text" placeholder="Cliente">
@@ -30,41 +39,53 @@
                             <option value="Hamburguesa">Hamburguesa</option>
                             <option value="Perro">Perro</option>
                         </select>
-
                     </div>
                     <div class="mb-3">
-                        <label class="form-label" placeholder="Precio">Precio</label>
-                        <input type="number" min="20000" class="precio form-control"placeholder="Precio">
+                        <label class="form-label">Precio</label>
+                        <input type="number" min="20000" class="precio form-control" placeholder="Precio">
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Imagen</label>
                         <input type="url" class="imagen form-control" placeholder="Imagen">
                     </div>
                     <div class="mb-3">
-                        <label class="form-label">Observacion</label>
-                        <input type="text" class="observacion form-control" placeholder="Observacion">
+                        <label class="form-label">Observación</label>
+                        <input type="text" class="observacion form-control" placeholder="Observación">
                     </div>
-                    <button type="submit" class="btnGuardar btn btn-primary">GUARDAR PEDIDO</button>
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btnGuardar btn btn-primary flex-fill">GUARDAR PEDIDO</button>
+                        <button id="exportarPDF" class="btnExportar btn btn-secondary flex-fill">Exportar a PDF</button>
                     </div>
-                    </form>
-            <div class="col-7">
-                <table class="table mt-5">
-                    <thead>
+                </form>
+            </div>
+
+            <!-- Tabla -->
+            <div class="col-md-6">
+                <h2 class="text-center mt-3">Pedidos Registrados</h2>
+                <table class="table table-bordered w-100 mt-3">
+                    <thead class="table-primary">
                         <tr>
                             <th>#</th>
                             <th>Cliente</th>
                             <th>Producto</th>
                             <th>Precio</th>
-                            <th>descripcion</th>
+                            <th>Imagen</th>
+                            <th>Observación</th>
                             <th>Acciones</th>
                         </tr>
                     </thead>
-                    <tbody></tbody>
+                    <tbody>
+
+                    </tbody>
                 </table>
             </div>
         </div>
     </div>
+
     <script src="/js/bootstrap.min.js"></script>
     <script type="module" src="./js/localStorage.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
 </body>
+
 </html>

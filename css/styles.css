@@ -1,0 +1,117 @@
+/* Estilo del buscador */
+#buscador {
+    border-radius: 25px;
+    padding-left: 40px; /* Espacio para el icono */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ccc;
+    transition: all 0.3s ease-in-out;
+}
+
+#buscador:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 10px rgba(0, 123, 255, 0.3);
+}
+
+/* Contenedor para el icono */
+.input-group {
+    position: relative;
+}
+
+.input-group .icon {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #888;
+}
+
+/* Estilo del botón */
+.btnGuardar {
+    background: linear-gradient(45deg, #007bff, #0056b3);
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.btnGuardar:hover {
+    background: linear-gradient(45deg, #0056b3, #003d80);
+    transform: scale(1.05);
+}
+table {
+    width: 100%;
+    /* Hace que la tabla ocupe todo el ancho */
+    border-collapse: collapse;
+}
+
+thead {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+}
+
+th,
+td {
+    padding: 20px;
+    margin: 20px;
+    /* Aumenta el espacio interno de las celdas */
+    text-align: center;
+    border: 1px solid #ddd;
+    /* Agrega bordes para mejor visibilidad */
+}
+
+tbody tr {
+    background-color: #f8f9fa;
+}
+
+tbody tr:not(:last-child) {
+    margin-bottom: 15px;
+    display: table-row;
+    border-bottom: 10px solid transparent;
+    /* Crea separación entre filas */
+}
+
+.btn-editar,
+.btn-eliminar {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    margin-right: 5px;
+    /* Espacio entre botones */
+}
+.acciones {
+    width: 100%;
+    display: flex;
+    gap: 8px;
+    /* Espacio entre botones */
+    justify-content: center;
+    /* Centra los botones en la celda */
+    align-items: center;
+    /* Alinea verticalmente */
+}
+/* Efectos de hover */
+.btn-warning:hover {
+
+    color: white;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+.btn-danger:hover {
+
+    color: white;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+/* Mejor apariencia de los botones */
+.btn {
+    border-radius: 8px;
+    font-weight: bold;
+}
